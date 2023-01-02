@@ -1,19 +1,19 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './Components/Home'
-import About from './Components/About'
-import Products from './Components/Products'
-import Contact from './Components/Contact'
-import SingleProduct from './Components/SingleProduct'
-import Cart from './Components/Cart'
-import ErrorPage from './Components/ErrorPage'
+import Home from './Pages/Home'
+import About from './Pages/About'
+import Products from './Pages/Products'
+import Contact from './Pages/Contact'
+import SingleProduct from './Pages/SingleProduct'
+import Cart from './Pages/Cart'
+import ErrorPage from './Pages/ErrorPage'
 import NavBar from './Components/NavBar'
 
 const App = () => {
   return (
-    <>    
+    <>
       <BrowserRouter>
-      <NavBar/>
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
