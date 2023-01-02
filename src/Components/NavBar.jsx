@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Button } from 'flowbite-react'
+import { Navbar } from 'flowbite-react'
 import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
