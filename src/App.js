@@ -7,11 +7,13 @@ import Contact from './Components/Contact'
 import SingleProduct from './Components/SingleProduct'
 import Cart from './Components/Cart'
 import ErrorPage from './Components/ErrorPage'
+import NavBar from './Components/NavBar'
 
 const App = () => {
   return (
     <>    
       <BrowserRouter>
+      <NavBar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
