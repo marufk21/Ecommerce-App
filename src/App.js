@@ -9,22 +9,25 @@ import Cart from './Pages/Cart'
 import ErrorPage from './Pages/ErrorPage'
 import NavBar from './Components/NavBar'
 import Footer from './Components/Footer'
+import  ProductState  from './Context/Products/ProductState'
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/singleproduct/:id" element={<SingleProduct />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-        <Footer/>
+        <ProductState>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/singleproduct/:id" element={<SingleProduct />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+          <Footer />
+        </ProductState>
       </BrowserRouter>
     </>
   )
