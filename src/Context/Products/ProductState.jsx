@@ -1,3 +1,4 @@
+import React,{useContext} from 'react'
 import ProductContext from './ProductContext'
 
 const ProductState = (props) => {
@@ -12,5 +13,9 @@ const ProductState = (props) => {
   )
 }
 
+// Custom Hooks
+const useProductContext = () => {
+  return useContext(ProductContext)
+}
 
-export default ProductState
+export { ProductState, useProductContext, ProductContext }
