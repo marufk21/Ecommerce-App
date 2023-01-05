@@ -11,8 +11,8 @@ const Home = () => {
   return (
   <>
   <HeroSection mydata={data} />
-  <Services/>
   <Trusted/>
+  <Services/>
   </>
   )
 }

@@ -3,10 +3,10 @@ import React from 'react'
 const Trusted = () => {
   return (
     <>
-      <section className="bg-white  dark:bg-gray-900">
+      <section className=" bg-white dark:bg-gray-900">
         <div className="max-w-screen-xl px-4 pb-8 mx-auto lg:pb-16">
           <div className="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 sm:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
-            <div  className="flex items-center lg:justify-center">
+            <div className="flex items-center lg:justify-center">
               <svg
                 className="h-9 hover:text-gray-900 dark:hover:text-white"
                 viewBox="0 0 125 35"
@@ -21,7 +21,7 @@ const Trusted = () => {
                 />
               </svg>
             </div>
-            <div  className="flex items-center lg:justify-center">
+            <div className="flex items-center lg:justify-center">
               <svg
                 className="h-9 hover:text-gray-900 dark:hover:text-white"
                 viewBox="0 0 86 29"
@@ -36,7 +36,7 @@ const Trusted = () => {
                 />
               </svg>
             </div>
-            <div  className="flex items-center lg:justify-center">
+            <div className="flex items-center lg:justify-center">
               <svg
                 className="h-8 hover:text-gray-900 dark:hover:text-white"
                 viewBox="0 0 151 34"
@@ -62,7 +62,7 @@ const Trusted = () => {
               </svg>
             </div>
 
-            <div  className="flex items-center lg:justify-center">
+            <div className="flex items-center lg:justify-center">
               <svg
                 className="h-9 hover:text-gray-900 dark:hover:text-white"
                 viewBox="0 0 124 38"
@@ -75,7 +75,7 @@ const Trusted = () => {
                 />
               </svg>
             </div>
-            <div  className="flex items-center lg:justify-center">
+            <div className="flex items-center lg:justify-center">
               <svg
                 className="h-9 hover:text-gray-900 dark:hover:text-white"
                 viewBox="0 0 137 37"
@@ -156,7 +156,7 @@ const Trusted = () => {
                 />
               </svg>
             </div>
-            <div  className="flex items-center lg:justify-center">
+            <div className="flex items-center lg:justify-center">
               <svg
                 className="h-6 hover:text-gray-900 dark:hover:text-white"
                 viewBox="0 0 124 21"

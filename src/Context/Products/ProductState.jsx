@@ -1,39 +1,44 @@
-import React, { useContext } from 'react'
+import { useContext, useEffect, useReducer } from 'react'
 import axios from 'axios'
 import ProductContext from './ProductContext'
-import { useState, useEffect } from 'react'
+import reducer from '../../Reducers/ProductReducers'
 
+const API = 'https://api.pujakaitem.com/api/products'
 const ProductState = (props) => {
-  const [data, setData] = useState(null)
+  const intialState = {
+    isLoading: false,
+    isError: false,
+    products: [],
+    fetaureProducts: [],
+  }
+  // useReducer Hook
+  const [state, dispatch] = useReducer(reducer, intialState)
 
-  // Fetching data
-  async function fetchData() {
+  // Fetch the Data Using Axios
+  const getProducts = async (url) => {
+    dispatch({ type: 'SET_LOADING' })
     try {
-      const response = await axios.get(
-        'https://api.pujakaitem.com/api/products',
-      )
-      console.log(response)
-      return response.data
+      const res = await axios.get(url)
+      const products = await res.data
+      // console.log(products)
+      dispatch({ type: 'SET_API_DATA', payload: products })
     } catch (error) {
-      console.error(error)
+      dispatch({ type: 'API_ERROR' })
     }
   }
+  // useEffect Hook for reload page one time
   useEffect(() => {
-    async function fetchDataAndSet() {
-      const data = await fetchData()
-      setData(data)
-    }
-    fetchDataAndSet()
-  }, []) // Runs in one time
+    getProducts(API)
+  }, [])
 
   return (
-    <ProductContext.Provider value={'maruf'}>
+    <ProductContext.Provider value={{ ...state }}>
       {props.children}
     </ProductContext.Provider>
   )
 }
 
-// Custom Hooks
+// Custom Hook
 const useProductContext = () => {
   return useContext(ProductContext)
 }

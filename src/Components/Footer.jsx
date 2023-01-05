@@ -152,7 +152,7 @@ const Footer = () => {
               Shokart
             </NavLink>
             <span className="block text-sm text-center text-gray-500 dark:text-gray-400">
-              © 2023-2024 Shokart™. All Rights Reserved.
+              © 2023 Shokart™. All Rights Reserved.
               {/* <NavLink
                 to="https://flowbite.com"
                 className="text-purple-600 hover:underline dark:text-purple-500"
