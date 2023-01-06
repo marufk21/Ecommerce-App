@@ -9,14 +9,16 @@ const FeaturedProducts = () => {
   }
   return (
     <>
-      <section className="text-gray-600 body-font">
-        <h2 class="mb-16 text-5xl font-extrabold tracking-tight flex justify-center text-gray-900 dark:text-white">
-          Our Products
-        </h2>
-        <div className="container px-7 my-4 ml-12 flex justify-center">
-          <div className="flex flex-wrap -m-4">
+      <section className="bg-white dark:bg-gray-900">
+        <div className="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
+          <div className="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
+            <h2 className="mb-4 text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+              Our Products
+            </h2>
+          </div>
+          <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
             {featureProducts.map((curElem) => {
-              return <Product key={curElem._id} {...curElem} />
+              return <Product key={curElem.id} {...curElem} />
             })}
           </div>
         </div>

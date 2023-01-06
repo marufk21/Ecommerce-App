@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card } from 'flowbite-react'
 import { NavLink } from 'react-router-dom'
+import FormatPrice from '../Helpers/FormatPrice'
 
 const Product = (curElem) => {
   const { id, image, name, price, category } = curElem
@@ -8,18 +9,15 @@ const Product = (curElem) => {
   return (
     <>
       <NavLink to={`/singleproduct/${id}`}>
-        <div className="max-w-sm mx-4">
-          <Card
-            imgAlt="Apple Watch Series 7 in colors pink, silver, and black"
-            imgSrc={image}
-          >
-            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+        <div className="flex flex-col sm:my-3 max-w-lg mx-auto text-center text-gray-900 bg-white border rounded-lg shadow dark:border-gray-600 dark:bg-gray-800 dark:text-white">
+          <Card imgAlt={name} imgSrc={image}>
+            <h5 className="text-xl font-semibold capitalize tracking-tight text-gray-900 dark:text-white">
               {name}
             </h5>
 
             <div className="flex items-center justify-between">
               <span className="text-3xl font-bold text-gray-900 dark:text-white">
-                {price}
+                {<FormatPrice price={price} />}
               </span>
             </div>
           </Card>
