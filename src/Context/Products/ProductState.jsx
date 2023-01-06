@@ -9,7 +9,7 @@ const ProductState = (props) => {
     isLoading: false,
     isError: false,
     products: [],
-    fetaureProducts: [],
+    featureProducts: [],
   }
   // useReducer Hook
   const [state, dispatch] = useReducer(reducer, intialState)

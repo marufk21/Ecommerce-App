@@ -1,9 +1,6 @@
-// import React from 'react'
-// import ProductContext from '../Context/Products/ProductContext'
 import {useProductContext} from '../Context/Products/ProductState'
 
 const Products = () => {
-  // const a = useContext(ProductContext)
   const a = useProductContext()
   return (
     <>
