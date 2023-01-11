@@ -10,11 +10,13 @@ const ProductState = (props) => {
     isError: false,
     products: [],
     featureProducts: [],
+    isSingleLoading: false,
+    singleProduct: {},
   }
   // useReducer Hook
   const [state, dispatch] = useReducer(reducer, intialState)
 
-  // Fetch the Data Using Axios
+  // Fetch the Data Using Axios - Products
   const getProducts = async (url) => {
     dispatch({ type: 'SET_LOADING' })
     try {
@@ -26,13 +28,26 @@ const ProductState = (props) => {
       dispatch({ type: 'API_ERROR' })
     }
   }
+  // Fetch the Data Using Axios - SingleProduct
+  const getSingleProduct = async (url) => {
+    
+    dispatch({ type: 'SET_SINGLE_LOADING' })
+    try {
+      const res = await axios.get(url)
+      const singleProduct = await res.data
+      dispatch({ type: 'SET_SINGLE_PRODUCT', payload: singleProduct })
+    } catch (error) {
+      dispatch({ type: 'SET_SINGLE_ERROR' })
+    }
+  }
+
   // useEffect Hook for reload page one time
   useEffect(() => {
     getProducts(API)
   }, [])
 
   return (
-    <ProductContext.Provider value={{ ...state }}>
+    <ProductContext.Provider value={{ ...state, getSingleProduct }}>
       {props.children}
     </ProductContext.Provider>
   )
