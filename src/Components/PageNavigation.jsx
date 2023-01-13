@@ -1,6 +1,5 @@
 import { Breadcrumb } from 'flowbite-react'
 import { AiFillHome } from 'react-icons/ai'
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const PageNavigation = ({ title }) => {

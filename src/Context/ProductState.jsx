@@ -1,10 +1,11 @@
 import { useContext, useEffect, useReducer } from 'react'
 import axios from 'axios'
 import ProductContext from './ProductContext'
-import reducer from '../../Reducers/ProductReducers'
-
+import reducer from "../Reducers/ProductReducers";
 const API = 'https://api.pujakaitem.com/api/products'
+
 const ProductState = (props) => {
+  
   const intialState = {
     isLoading: false,
     isError: false,
@@ -30,7 +31,6 @@ const ProductState = (props) => {
   }
   // Fetch the Data Using Axios - SingleProduct
   const getSingleProduct = async (url) => {
-    
     dispatch({ type: 'SET_SINGLE_LOADING' })
     try {
       const res = await axios.get(url)

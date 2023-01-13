@@ -1,4 +1,4 @@
-import { useProductContext } from '../Context/Products/ProductState'
+import { useProductContext } from '../Context/ProductState'
 import Product from './Product'
 
 const FeaturedProducts = () => {

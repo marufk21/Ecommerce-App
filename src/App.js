@@ -9,7 +9,7 @@ import Cart from './Pages/Cart'
 import ErrorPage from './Pages/ErrorPage'
 import NavBar from './Components/NavBar'
 import Footer from './Components/Footer'
-import { ProductState } from './Context/Products/ProductState'
+import { ProductState } from './Context/ProductState'
 
 const App = () => {
   return (

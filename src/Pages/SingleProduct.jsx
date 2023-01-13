@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import PageNavigation from '../Components/PageNavigation'
-import { useProductContext } from '../Context/Products/ProductState'
+import { useProductContext } from '../Context/ProductState'
 import StarReview from '../Components/StarReview'
 import AddToCart from '../Components/AddToCart'
 
