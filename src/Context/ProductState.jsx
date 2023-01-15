@@ -1,11 +1,11 @@
-import { useContext, useEffect, useReducer } from 'react'
+import { createContext, useContext, useEffect, useReducer } from 'react'
 import axios from 'axios'
-import ProductContext from './ProductContext'
-import reducer from "../Reducers/ProductReducers";
+import reducer from '../Reducers/ProductReducers'
 const API = 'https://api.pujakaitem.com/api/products'
 
+const ProductContext = createContext()
+
 const ProductState = (props) => {
-  
   const intialState = {
     isLoading: false,
     isError: false,

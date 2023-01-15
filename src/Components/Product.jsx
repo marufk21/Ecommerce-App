@@ -1,6 +1,6 @@
 import React from 'react'
-import { Card } from 'flowbite-react'
 import { NavLink } from 'react-router-dom'
+import { Card } from 'flowbite-react'
 import FormatPrice from '../Helpers/FormatPrice'
 
 const Product = (curElem) => {
