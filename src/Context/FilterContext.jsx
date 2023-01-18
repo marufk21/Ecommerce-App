@@ -9,6 +9,12 @@ const initialState = {
   all_products: [],
   grid_view: true,
   sorting_value: 'lowest',
+  filters: {
+    text: '',
+    category: 'all',
+    company: 'all',
+    color: 'all',
+  },
 }
 
 export const FilterContextProvider = ({ children }) => {
@@ -16,33 +22,50 @@ export const FilterContextProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(reducer, initialState)
 
-  // Set the grid view
+  // to set the grid view
   const setGridView = () => {
     return dispatch({ type: 'SET_GRID_VIEW' })
   }
-  // Sorting function
+
+  // sorting function
   const sorting = (event) => {
     let userValue = event.target.value
-    dispatch({ type: 'GET_SORT_VALUE', payload:userValue })
+    dispatch({ type: 'GET_SORT_VALUE', payload: userValue })
   }
-  // Sort the products
-  useEffect(() => {
-    dispatch({ type: 'SORTING_PRODUCTS', payload: products })
-  }, [state.sorting_value])
 
+  // update the filter values
+  const updateFilterValue = (event) => {
+    let name = event.target.name
+    let value = event.target.value
+
+    return dispatch({ type: 'UPDATE_FILTERS_VALUE', payload: { name, value } })
+  }
+
+  // to sort the product
+  useEffect(() => {
+    dispatch({ type: 'FILTER_PRODUCTS' })
+    dispatch({ type: 'SORTING_PRODUCTS' })
+  }, [products, state.sorting_value, state.filters])
+
+  // to load all the products for grid and list view
   useEffect(() => {
     dispatch({ type: 'LOAD_FILTER_PRODUCTS', payload: products })
   }, [products])
 
   return (
     <FilterContext.Provider
-      value={{ ...state, setGridView, sorting }} //setListView,
+      value={{
+        ...state,
+        setGridView,
+        sorting,
+        updateFilterValue,
+      }}
     >
       {children}
     </FilterContext.Provider>
   )
 }
-// Custom Hook for FilterContext
+
 export const useFilterContext = () => {
   return useContext(FilterContext)
 }

@@ -5,15 +5,16 @@ const API = 'https://api.pujakaitem.com/api/products'
 
 const ProductContext = createContext()
 
-const ProductState = (props) => {
-  const intialState = {
-    isLoading: false,
-    isError: false,
-    products: [],
-    featureProducts: [],
-    isSingleLoading: false,
-    singleProduct: {},
-  }
+const intialState = {
+  isLoading: false,
+  isError: false,
+  products: [],
+  featureProducts: [],
+  isSingleLoading: false,
+  singleProduct: {},
+}
+
+const ProductState = ({ children }) => {
   // useReducer Hook
   const [state, dispatch] = useReducer(reducer, intialState)
 
@@ -48,7 +49,7 @@ const ProductState = (props) => {
 
   return (
     <ProductContext.Provider value={{ ...state, getSingleProduct }}>
-      {props.children}
+      {children}
     </ProductContext.Provider>
   )
 }
