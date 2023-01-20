@@ -3,7 +3,7 @@ import Product from './Product'
 
 const FeaturedProducts = () => {
   const { isLoading, featureProducts } = useProductContext()
-  //   console.log(featureProducts)
+  
   if (isLoading) {
     return <div>...Loading</div>
   }
