@@ -34,98 +34,109 @@ const FilterSection = () => {
 
   return (
     <>
-      <div className="filter-search">
-        <form onSubmit={(e) => e.preventDefault()}>
-          <input
-            type="text"
-            name="text"
-            placeholder="Search"
-            value={text}
-            onChange={updateFilterValue}
-          />
-        </form>
-      </div>
+      <aside class="w-64  sticky top-12 " aria-label="Sidebar">
+        <div class="px-3 py-4 overflow-y-auto rounded bg-gray-50 dark:bg-gray-800">
+          <div className="flex items-center p-2 sm:p-4">
+            <form onSubmit={(e) => e.preventDefault()}>
+              <input
+                className="w-auto p-2 rounded-lg sm:w-auto sm:p-3 sm:rounded-md"
+                type="text"
+                name="text"
+                placeholder="Search"
+                value={text}
+                onChange={updateFilterValue}
+              />
+            </form>
+          </div>
 
-      <div className="filter-category">
-        <h3>Category</h3>
-        <div>
-          {categoryData.map((curElem, index) => {
-            return (
-              <button
-                key={index}
-                type="button"
-                name="category"
-                value={curElem}
-                className={curElem === category ? 'active' : ''}
+          <div className="flex flex-col items-center mt-2">
+            <h3 className="mb-2 text-lg font-normal text-gray-500">Category</h3>
+            <span className="flex flex-col">
+              {categoryData.map((curElem, index) => {
+                return (
+                  <button
+                    key={index}
+                    type="button"
+                    name="category"
+                    value={curElem}
+                    className={
+                      curElem === category
+                        ? 'capitalize mb-1 text-lg font-normal text-purple-600'
+                        : 'capitalize mb-1 text-lg font-normal text-gray-500'
+                    }
+                    onClick={updateFilterValue}
+                  >
+                    {curElem}
+                  </button>
+                )
+              })}
+            </span>
+          </div>
+
+          <div className="flex flex-col items-center mt-4">
+            <h3 className="mb-2 text-lg font-normal text-gray-500">Company</h3>
+            <form action="#">
+              <select
+                name="company"
+                id="company"
+                className="capitalize mb-2 text-base font-normal text-gray-500 "
                 onClick={updateFilterValue}
               >
-                {curElem}
-              </button>
-            )
-          })}
-        </div>
-      </div>
+                {companyData.map((curElem, index) => {
+                  return (
+                    <option key={index} value={curElem} name="company">
+                      {curElem}
+                    </option>
+                  )
+                })}
+              </select>
+            </form>
+          </div>
 
-      <div className="filter-company">
-        <h3>Company</h3>
-
-        <form action="#">
-          <select
-            name="company"
-            id="company"
-            className="filter-company--select"
-            onClick={updateFilterValue}
-          >
-            {companyData.map((curElem, index) => {
-              return (
-                <option key={index} value={curElem} name="company">
-                  {curElem}
-                </option>
-              )
-            })}
-          </select>
-        </form>
-      </div>
-      {/* COlor */}
-      <div className="filter-colors colors">
-        <h3>Colors</h3>
-
-        <div className="filter-color-style">
-          {colorsData.map((curColor, index) => {
-            if (curColor === 'all') {
-              return (
-                <button
-                  key={index}
-                  type="button"
-                  value={curColor}
-                  name="color"
-                  className="color-all--style"
-                  onClick={updateFilterValue}
-                >
-                  all
-                </button>
-              )
-            }
-            return (
-              <button
-                key={index}
-                type="button"
-                value={curColor}
-                name="color"
-                style={{ backgroundColor: curColor }}
-                className={
-                  color === curColor
-                    ? 'border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none opacity-100'
-                    : 'border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none'
+          <div className="flex flex-col items-center mt-4">
+            <h3 className="text-lg font-normal text-gray-500">Colors</h3>
+            <div className="">
+              {colorsData.map((curColor, index) => {
+                if (curColor === 'all') {
+                  return (
+                    <button
+                      key={index}
+                      type="button"
+                      value={curColor}
+                      name="color"
+                      className=""
+                      onClick={updateFilterValue}
+                    >
+                      <span className="mb-2 text-base font-normal text-gray-500">
+                        All
+                      </span>
+                    </button>
+                  )
                 }
-                onClick={updateFilterValue}
-              >
-                {color === curColor ? <FaCheck className="checkStyle" /> : null}
-              </button>
-            )
-          })}
+                return (
+                  <button
+                    key={index}
+                    type="button"
+                    value={curColor}
+                    name="color"
+                    style={{ backgroundColor: curColor }}
+                    className={
+                      color === curColor
+                        ? 'mt-2 border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none opacity-100'
+                        : 'mt-2 border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none'
+                    }
+                    onClick={updateFilterValue}
+                  >
+                    {color === curColor ? (
+                      <FaCheck className="checkStyle" />
+                    ) : null}
+                  </button>
+                )
+              })}
+            </div>
+          </div>
         </div>
-      </div>
+      </aside>
     </>
   )
 }

@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 const NavBar = () => {
   return (
     <>
-      <Navbar fluid={true} rounded={true} className="sticky top-0 z-100">
+      <Navbar fluid={true} rounded={true} className="sticky top-0 z-10">
         <Navbar.Brand href="/">
           {/* Logo */}
           {/* <img
