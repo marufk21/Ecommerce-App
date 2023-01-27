@@ -14,12 +14,16 @@ const initialState = {
     category: 'all',
     company: 'all',
     color: 'all',
+    maxPrice: 0,
+    price: 0,
+    minPrice: 0,
   },
 }
 
 export const FilterContextProvider = ({ children }) => {
   const { products } = useProductContext()
 
+  //Reducer
   const [state, dispatch] = useReducer(reducer, initialState)
 
   // to set the grid view
@@ -41,6 +45,11 @@ export const FilterContextProvider = ({ children }) => {
     return dispatch({ type: 'UPDATE_FILTERS_VALUE', payload: { name, value } })
   }
 
+  // to clear the filter
+  const clearFilters = () => {
+    dispatch({ type: 'CLEAR_FILTERS' })
+  }
+
   // to sort the product
   useEffect(() => {
     dispatch({ type: 'FILTER_PRODUCTS' })
@@ -59,6 +68,7 @@ export const FilterContextProvider = ({ children }) => {
         setGridView,
         sorting,
         updateFilterValue,
+        clearFilters,
       }}
     >
       {children}
