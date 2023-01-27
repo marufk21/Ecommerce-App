@@ -1,5 +1,5 @@
-import React from 'react'
-import { useFilterContext } from '../Context/FilterContext'
+import React from "react";
+import { useFilterContext } from "../Context/FilterContext";
 
 const Sort = () => {
   const {
@@ -8,7 +8,7 @@ const Sort = () => {
     // setGridView,
     // setListView,
     sorting,
-  } = useFilterContext()
+  } = useFilterContext();
   return (
     <>
       <div className="grid grid-cols-2 divide-x items-center mt-6">
@@ -17,7 +17,7 @@ const Sort = () => {
             <select
               name="sort"
               id="sort"
-              className="w-44 text-sm  text-gray-600 py-3 px-4 border-gray-300 shadow-sm rounded focus:ring-primary focus:border-primary"
+              className="py-2.5 px-5 pr-8 mr-2 mb-2 text-sm font-normal text-gray-500 focus  bg-white rounded-full  border-purple-600  hover:border-purple-600 hover:bg-gray-100 hover:text-gray-500 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
               onClick={sorting}
             >
               <option value="">Relevance</option>
@@ -29,11 +29,11 @@ const Sort = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <span className="border w-44 text-sm  text-gray-600 py-3 px-4 border-gray-300 shadow-sm rounded focus:ring-primary focus:border-primary">{`Product Available ${filter_products.length}`}</span>
+          <span className="py-2.5 px-5 mr-2 mb-2 text-sm font-normal text-gray-500  border-purple-600  hover:border-purple-600  bg-white rounded-full border hover:bg-gray-100 hover:text-black dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">{`Product Available ${filter_products.length}`}</span>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Sort
+export default Sort;

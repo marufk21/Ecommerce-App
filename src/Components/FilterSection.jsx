@@ -35,22 +35,22 @@ const FilterSection = () => {
 
   return (
     <>
-      <aside className="w-64  sticky top-12 " aria-label="Sidebar">
-        <div className="px-3 py-4 overflow-y-auto rounded bg-gray-50 dark:bg-gray-800">
+      <aside className="w-64 sticky top-12 " aria-label="Sidebar">
+        <div className="px-3 py-2 pb-5 rounded bg-gray-50 dark:bg-gray-800">
           <div className="flex items-center p-2 sm:p-4">
             <form onSubmit={(e) => e.preventDefault()}>
               <input
-                className="w-auto p-2 rounded-lg sm:w-auto sm:p-3 sm:rounded-md"
+                className="w-full bg-gray-100 bg-opacity-50 rounded-full border border-gray-300 focus:ring-2 focus:bg-transparent focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 type="text"
                 name="text"
-                placeholder="Search"
+                placeholder="Search for products"
                 value={text}
                 onChange={updateFilterValue}
               />
             </form>
           </div>
 
-          <div className="flex flex-col items-center mt-2">
+          <div className="flex flex-col items-center">
             <h3 className="mb-2 text-lg font-normal text-gray-500">Category</h3>
             <span className="flex flex-col">
               {categoryData.map((curElem, index) => {
@@ -62,8 +62,8 @@ const FilterSection = () => {
                     value={curElem}
                     className={
                       curElem === category
-                        ? "capitalize mb-1 text-lg font-normal text-purple-600"
-                        : "capitalize mb-1 text-lg font-normal text-gray-500"
+                        ? "capitalize  text-lg font-normal text-purple-600"
+                        : "capitalize  text-lg font-normal text-gray-500"
                     }
                     onClick={updateFilterValue}
                   >
@@ -74,13 +74,13 @@ const FilterSection = () => {
             </span>
           </div>
 
-          <div className="flex flex-col items-center mt-4">
+          <div className="flex flex-col items-center mt-2">
             <h3 className="mb-2 text-lg font-normal text-gray-500">Company</h3>
             <form action="#">
               <select
                 name="company"
                 id="company"
-                className="capitalize mb-2 text-base font-normal text-gray-500 "
+                className="w-full bg-gray-100 bg-opacity-50 rounded-full border border-gray-300 focus:ring-2 focus:bg-transparent focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 pr-9 leading-8 transition-colors duration-200 ease-in-out capitalize"
                 onClick={updateFilterValue}
               >
                 {companyData.map((curElem, index) => {
@@ -96,7 +96,7 @@ const FilterSection = () => {
 
           <div className="flex flex-col items-center mt-4">
             <h3 className="text-lg font-normal text-gray-500">Colors</h3>
-            <div className="">
+            <div className="flex items-end space-x-px">
               {colorsData.map((curColor, index) => {
                 if (curColor === "all") {
                   return (
@@ -108,7 +108,7 @@ const FilterSection = () => {
                       className=""
                       onClick={updateFilterValue}
                     >
-                      <span className="mb-2 text-base font-normal text-gray-500">
+                      <span className="text-base font-normal text-gray-500">
                         All
                       </span>
                     </button>
@@ -136,15 +136,16 @@ const FilterSection = () => {
               })}
             </div>
           </div>
-          <div className="flex flex-col items-center mt-4">
+
+          <div className="flex flex-col items-center mt-5">
             <div className="flex space-x-3">
               <h3 className="text-lg font-normal text-gray-500">Price</h3>
               <p className="text-lg font-normal text-gray-500">
                 <FormatPrice price={price} />
               </p>
             </div>
-
             <input
+              className="my-2 accent-purple-500"
               type="range"
               name="price"
               min={minPrice}
@@ -154,7 +155,7 @@ const FilterSection = () => {
             />
           </div>
 
-          <div className="flex justify-center mt-2">
+          <div className="flex justify-center mt-1">
             <button
               className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-3 py-1.5 text-center mr-2 mb-2"
               onClick={clearFilters}
