@@ -16,17 +16,15 @@ const CartItem = ({ id, name, image, color, price, amount }) => {
   };
 
   return (
-    <div className="grid grid-cols-5 gap-4">
-      <div className="flex items-center space-x-4 col-span-2">
+    <div className="flex justify-center space-x-36">
+      <div className="w-14 h-18">
         <div>
-          <figure>
-            <img className="w-full h-auto" src={image} alt={id} />
-          </figure>
+          <img className="w-full h-auto" src={image} alt={id} />
         </div>
         <div>
-          <p className="text-base font-bold mb-2">{name}</p>
-          <div className="flex items-center mb-2">
-            <p className="text-sm mr-2">color:</p>
+          <p className="">{name}</p>
+          <div className="">
+            <p className="">color:</p>
             <div
               className="w-4 h-4 rounded-full"
               style={{ backgroundColor: color, color: color }}
@@ -34,29 +32,27 @@ const CartItem = ({ id, name, image, color, price, amount }) => {
           </div>
         </div>
       </div>
-      <div className="hidden md:block">
-        <p className="text-base">
+      <div className="">
+        <p className="pl-3">
           <FormatPrice price={price} />
         </p>
       </div>
-      <div className="col-span-2 flex items-center justify-center">
+   
+      <div className="pl-8">
         <CartAmountToggle
           amount={amount}
           setDecrease={setDecrease}
           setIncrease={setIncrease}
         />
       </div>
-      <div className="hidden md:block">
-        <p className="text-base font-bold">
+      <div className="">
+        <p className="">
           <FormatPrice price={price * amount} />
         </p>
       </div>
-      <div className="flex items-center justify-end col-span-1">
-        <div className="text-base font-bold mr-4"></div>
-        <FaTrash
-          className="text-red-500 cursor-pointer text-xl"
-          onClick={() => removeItem(id)}
-        />
+      <div className="">
+        <div className=""></div>
+        <FaTrash className="" onClick={() => removeItem(id)} />
       </div>
     </div>
   );

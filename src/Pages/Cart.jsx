@@ -12,8 +12,8 @@ const Cart = () => {
   }
 
   return (
-    <div className="container">
-      <div className="cart_heading grid grid-five-column">
+    <div className="">
+      <div className="flex justify-center space-x-44">
         <p>Item</p>
         <p className="cart-hide">Price</p>
         <p>Quantity</p>
@@ -21,24 +21,16 @@ const Cart = () => {
         <p>Remove</p>
       </div>
       <hr />
-      <div className="cart-item">
+      <div className="">
         {cart.map((curElem) => {
           return <CartItem key={curElem.id} {...curElem} />;
         })}
       </div>
       <hr />
-      <div className="cart-two-button">
-        <NavLink to="/products">
-          <button> continue Shopping </button>
-        </NavLink>
-        <button className="btn btn-clear" onClick={clearCart}>
-          clear cart
-        </button>
-      </div>
 
       {/* order total_amount */}
-      <div className="order-total--amount">
-        <div className="order-total--subdata">
+      <div className="">
+        <div className="flex justify-center space-x-60">
           <div>
             <p>subtotal:</p>
             <p>
@@ -59,6 +51,21 @@ const Cart = () => {
             </p>
           </div>
         </div>
+      </div>
+      <hr />
+      <div className="flex justify-center space-x-96">
+        <NavLink to="/products">
+          <button className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+            {" "}
+            continue Shopping{" "}
+          </button>
+        </NavLink>
+        <button
+          className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+          onClick={clearCart}
+        >
+          clear cart
+        </button>
       </div>
     </div>
   );
