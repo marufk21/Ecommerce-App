@@ -5,15 +5,15 @@ import { FaTrash } from "react-icons/fa";
 import { useCartContext } from "../Context/CartContext";
 
 const CartItem = ({ id, name, image, color, price, amount }) => {
-  const { removeItem } = useCartContext();
+  const { removeItem, setDecrease, setIncrement } = useCartContext();
 
-  const setDecrease = () => {
-    // amount > 1 ? amount(amount - 1) : amount(1);
-  };
+  // const setDecrease = () => {
+  //   // amount > 1 ? amount(amount - 1) : amount(1);
+  // };
 
-  const setIncrease = () => {
-    // amount < stock ? amount(amount + 1) : amount(0);
-  };
+  // const setIncrease = () => {
+  //   // amount < stock ? amount(amount + 1) : amount(0);
+  // };
 
   return (
     <div className="flex justify-center space-x-36">
@@ -37,12 +37,12 @@ const CartItem = ({ id, name, image, color, price, amount }) => {
           <FormatPrice price={price} />
         </p>
       </div>
-   
+
       <div className="pl-8">
         <CartAmountToggle
           amount={amount}
-          setDecrease={setDecrease}
-          setIncrease={setIncrease}
+          setDecrease={() => setDecrease(id)}
+          setIncrease={() => setIncrement(id)}
         />
       </div>
       <div className="">
