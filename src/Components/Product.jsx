@@ -4,7 +4,7 @@ import { Card } from 'flowbite-react'
 import FormatPrice from '../Helpers/FormatPrice'
 
 const Product = (curElem) => {
-  const { id, image, name, price, category } = curElem
+  const { id, image, name, price } = curElem
 
   return (
     <>
