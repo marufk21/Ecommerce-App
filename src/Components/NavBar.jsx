@@ -14,7 +14,7 @@ const NavBar = () => {
             alt="Ecommerce Logo"
           /> */}
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-            ShopKart
+          ElectriKart
           </span>
         </Navbar.Brand>
         <div className="flex md:order-2">
