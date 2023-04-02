@@ -2,7 +2,7 @@
 
 Welcome to the Ecommerce Website! This website is built with an interactive user interface. The website has various pages and features to provide a seamless shopping experience.
 
-Link - https://marufkhan.netlify.app
+Link - https://electrikart.netlify.app
 
 
 ## Technologies Used
