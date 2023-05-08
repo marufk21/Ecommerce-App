@@ -1,31 +1,41 @@
-import React from 'react'
-import { Button } from 'flowbite-react'
+import React from "react";
+import { Carousel } from "flowbite-react";
 
 const HeroSection = ({ mydata }) => {
-  const { name } = mydata
+  const { name } = mydata;
   return (
     <>
-      <section className="bg-white dark:bg-gray-900 ">
-        <div className="grid max-w-screen-xl px-4 pt-8 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-20">
-          <div className="mr-auto place-self-center lg:col-span-7">
-            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">
-              {name} <br />
-              Building digital <br />
-              products & brands.
-            </h1>
-            <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur, illum molestiae? Quo, blanditiis mollitia non
-            </p>
-            <Button className="text-white bg-purple-600 ">Shop Now</Button>
-          </div>
-          <div className=" hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="https://source.unsplash.com/_3Q3tsJ01nc" alt="hero" />
-          </div>
-        </div>
-      </section>
+      <div className="mt-1 h-56 sm:h-64 xl:h-80 2xl:h-96">
+        <Carousel slide={false}>
+          <img
+            className=""
+            src="https://source.unsplash.com/bRq7Cfn7zDs/1800x1600"
+            alt="..."
+          />
+          <img
+            className=""
+            src="https://source.unsplash.com/qDHwqQ05pVQ/1500x1000"
+            alt="..."
+          />
+          <img
+            className=""
+            src="https://source.unsplash.com/y0_vFxOHayg/1500x1000"
+            alt="..."
+          />
+          <img
+            className=""
+            src="https://source.unsplash.com/y1yQQmozTBw/1200x800"
+            alt="..."
+          />
+          <img
+            className=""
+            src="https://source.unsplash.com//nHsXs9FgIsk/1900x1200"
+            alt="..."
+          />
+        </Carousel>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
