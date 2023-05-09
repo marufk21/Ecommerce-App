@@ -1,13 +1,15 @@
-import { FaShieldAlt } from 'react-icons/fa';
+import { FaShieldAlt } from "react-icons/fa";
 
 function Trusted() {
   return (
-    <div className="bg-gray-100 py-8 mt-24">
+    <div className="bg-gray-100 py-24 mb-20">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-4">Trusted by top electronics brands</h2>
+        <h2 className="text-3xl font-bold mb-4 text-center">
+          Trusted by top electronics brands
+        </h2>
         <div className="flex flex-wrap justify-center items-center">
           <div className="w-1/2 sm:w-1/4 md:w-1/5 lg:w-1/6 p-4">
-            <div className="flex items-center">
+            <div className="flex items-center justify-center">
               <span className="text-4xl text-blue-500">
                 <FaShieldAlt />
               </span>
@@ -15,7 +17,7 @@ function Trusted() {
             </div>
           </div>
           <div className="w-1/2 sm:w-1/4 md:w-1/5 lg:w-1/6 p-4">
-            <div className="flex items-center">
+            <div className="flex items-center justify-center">
               <span className="text-4xl text-blue-500">
                 <FaShieldAlt />
               </span>
@@ -23,7 +25,7 @@ function Trusted() {
             </div>
           </div>
           <div className="w-1/2 sm:w-1/4 md:w-1/5 lg:w-1/6 p-4">
-            <div className="flex items-center">
+            <div className="flex items-center justify-center">
               <span className="text-4xl text-blue-500">
                 <FaShieldAlt />
               </span>
@@ -31,7 +33,7 @@ function Trusted() {
             </div>
           </div>
           <div className="w-1/2 sm:w-1/4 md:w-1/5 lg:w-1/6 p-4">
-            <div className="flex items-center">
+            <div className="flex items-center justify-center">
               <span className="text-4xl text-blue-500">
                 <FaShieldAlt />
               </span>
@@ -39,7 +41,7 @@ function Trusted() {
             </div>
           </div>
           <div className="w-1/2 sm:w-1/4 md:w-1/5 lg:w-1/6 p-4">
-            <div className="flex items-center">
+            <div className="flex items-center justify-center">
               <span className="text-4xl text-blue-500">
                 <FaShieldAlt />
               </span>
@@ -47,7 +49,7 @@ function Trusted() {
             </div>
           </div>
           <div className="w-1/2 sm:w-1/4 md:w-1/5 lg:w-1/6 p-4">
-            <div className="flex items-center">
+            <div className="flex items-center justify-center">
               <span className="text-4xl text-blue-500">
                 <FaShieldAlt />
               </span>
@@ -59,6 +61,5 @@ function Trusted() {
     </div>
   );
 }
-
 
 export default Trusted;

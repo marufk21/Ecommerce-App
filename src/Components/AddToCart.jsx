@@ -71,9 +71,9 @@ const AddToCart = ({ price, product }) => {
       />
 
       <div>
-        <div className="flex justify-center">
+        <div className="flex flex-col sm:flex-row justify-center">
           <NavLink to="/cart" onClick={handleClick}>
-            <button className="flex mr-16 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-60 0 rounded">
+            <button className="flex mb-2 sm:mb-0 mr-0 sm:mr-2 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
               Add to Cart
             </button>
           </NavLink>

@@ -35,9 +35,9 @@ const FilterSection = () => {
 
   return (
     <>
-      <aside className="w-64 sticky top-12 " aria-label="Sidebar">
+      <aside className="w-full sm:w-64 sticky top-12" aria-label="Sidebar">
         <div className="px-3 py-2 pb-5 rounded bg-gray-50 dark:bg-gray-800">
-          <div className="flex items-center p-2 sm:p-4">
+          <div className="flex flex-col items-center mb-4">
             <form onSubmit={(e) => e.preventDefault()}>
               <input
                 className="w-full bg-gray-100 bg-opacity-50 rounded-full border border-gray-300 focus:ring-2 focus:bg-transparent focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -50,7 +50,7 @@ const FilterSection = () => {
             </form>
           </div>
 
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center mb-4">
             <h3 className="mb-2 text-lg font-normal text-gray-500">Category</h3>
             <span className="flex flex-col">
               {categoryData.map((curElem, index) => {
@@ -74,7 +74,7 @@ const FilterSection = () => {
             </span>
           </div>
 
-          <div className="flex flex-col items-center mt-2">
+          <div className="flex flex-col items-center mb-4">
             <h3 className="mb-2 text-lg font-normal text-gray-500">Company</h3>
             <form action="#">
               <select
@@ -94,9 +94,9 @@ const FilterSection = () => {
             </form>
           </div>
 
-          <div className="flex flex-col items-center mt-4">
+          <div className="flex flex-col items-center mb-4">
             <h3 className="text-lg font-normal text-gray-500">Colors</h3>
-            <div className="flex items-end space-x-px">
+            <div className="flex items-end flex-wrap space-x-px">
               {colorsData.map((curColor, index) => {
                 if (curColor === "all") {
                   return (
