@@ -1,54 +1,63 @@
 import React from "react";
-import { Navbar } from "flowbite-react";
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <>
-      <Navbar fluid={true} rounded={true} className="sticky top-0 z-10">
-        <Navbar.Brand href="/">
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-            ElectriKart
-          </span>
-        </Navbar.Brand>
-        <div className="flex md:order-2">
-          <Navbar.Toggle />
+      <nav className="bg-white border-gray-200 dark:bg-gray-900">
+        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+          <NavLink to="" className="flex items-center">
+            <img src="" className="h-8 mr-3" alt="" />
+            <span className="border-slate-600 self-center text-2xl font-bold whitespace-nowrap dark:text-white">
+              ElectriKart
+            </span>
+          </NavLink>
+          <div className="flex items-center">
+            <a href="#" className="text-xl  text-blue-600 dark:text-blue-500 hover:underline">Login</a>
         </div>
-        <Navbar.Collapse>
-          <li>
-            <NavLink
-              to="/"
-              className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/products"
-              className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-            >
-              Products
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-            >
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/contact"
-              className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-            >
-              Contact Us
-            </NavLink>
-          </li>
-        </Navbar.Collapse>
-      </Navbar>
+        </div>
+      </nav>
+      <nav className="bg-gray-50 dark:bg-gray-700">
+        <div className="max-w-screen-xl px-4 py-3 flex justify-center mx-auto">
+          <div className="flex items-center">
+            <ul className="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
+              <li>
+                <NavLink
+                  to="/"
+                  className="text-gray-900 dark:text-white hover:underline"
+                  aria-current="page"
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/products"
+                  className="text-gray-900 dark:text-white hover:underline"
+                >
+                  Products
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/about"
+                  className="text-gray-900 dark:text-white hover:underline"
+                >
+                  About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/contact"
+                  className="text-gray-900 dark:text-white hover:underline"
+                >
+                  Contact Us
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </>
   );
 };

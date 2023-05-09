@@ -12,62 +12,57 @@ const Cart = () => {
   }
 
   return (
-    <div className="">
-      <div className="flex justify-center space-x-44">
-        <p>Item</p>
-        <p className="cart-hide">Price</p>
-        <p>Quantity</p>
-        <p className="cart-hide">Subtotal</p>
-        <p>Remove</p>
+    <div className="bg-white rounded-lg shadow-lg px-6 py-8 sm:px-8 sm:py-10 md:py-12">
+    <div className="space-y-6">
+      <div className="flex justify-center">
+        <p className="text-lg font-bold">Your Cart</p>
       </div>
       <hr />
-      <div className="">
+      <div className="space-y-4">
         {cart.map((curElem) => {
           return <CartItem key={curElem.id} {...curElem} />;
         })}
       </div>
       <hr />
-
-      {/* order total_amount */}
-      <div className="">
-        <div className="flex justify-center space-x-60">
-          <div>
-            <p>subtotal:</p>
-            <p>
-              <FormatPrice price={total_price} />
-            </p>
-          </div>
-          <div>
-            <p>shipping fee:</p>
-            <p>
-              <FormatPrice price={shipping_fee} />
-            </p>
-          </div>
-          <hr />
-          <div>
-            <p>order total:</p>
-            <p>
-              <FormatPrice price={shipping_fee + total_price} />
-            </p>
-          </div>
+      <div className="space-y-4">
+        <div className="flex justify-between">
+          <p className="text-sm font-medium">Subtotal:</p>
+          <p className="text-sm font-medium">
+            <FormatPrice price={total_price} />
+          </p>
+        </div>
+        <div className="flex justify-between">
+          <p className="text-sm font-medium">Shipping Fee:</p>
+          <p className="text-sm font-medium">
+            <FormatPrice price={shipping_fee} />
+          </p>
+        </div>
+        <hr />
+        <div className="flex justify-between">
+          <p className="text-lg font-bold">Order Total:</p>
+          <p className="text-lg font-bold">
+            <FormatPrice price={shipping_fee + total_price} />
+          </p>
         </div>
       </div>
       <hr />
-      <div className="flex justify-center space-x-96">
+      <div className="flex justify-between items-center">
         <NavLink to="/products">
-          <button className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
-            {" "}
-            continue Shopping{" "}
+          <button className="text-white bg-indigo-500 hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-indigo-300 dark:focus:ring-indigo-800 font-medium rounded-lg text-sm px-4 py-2">
+            Continue Shopping
           </button>
         </NavLink>
         <button
-          className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+          className="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-4 py-2"
           onClick={clearCart}
         >
-          clear cart
+          Clear Cart
         </button>
       </div>
     </div>
+  </div>
+  
+  
   );
 };
 

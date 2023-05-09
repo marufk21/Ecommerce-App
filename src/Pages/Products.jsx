@@ -5,16 +5,14 @@ import Sort from "../Components/Sort";
 const Products = () => {
   return (
     <>
-      <div className="grid grid-flow-col gap-4 ">
-        <div className="row-span-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="md:row-span-3">
           <FilterSection />
         </div>
-        <div className="col-span-2">
-          {" "}
+        <div className="md:col-span-2">
           <Sort />
         </div>
-        <div className="row-span-2 col-span-2 ...">
-          {" "}
+        <div className="md:row-span-2 md:col-span-2 flex flex-wrap justify-center">
           <ProductList />
         </div>
       </div>
