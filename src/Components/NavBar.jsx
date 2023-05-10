@@ -13,7 +13,7 @@ const NavBar = () => {
             </span>
           </NavLink>
           <div className="flex items-center">
-            <a href="#" className="text-xl  text-blue-600 dark:text-blue-500 hover:underline">Login</a>
+            <a href="/cart" className="text-xl font-semibold text-purple-500 dark:text-blue-500 hover:underline">My Cart</a>
         </div>
         </div>
       </nav>
