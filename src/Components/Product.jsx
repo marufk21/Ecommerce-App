@@ -1,22 +1,21 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import { Card } from 'flowbite-react'
-import FormatPrice from '../Helpers/FormatPrice'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { Card } from "flowbite-react";
+import FormatPrice from "../Helpers/FormatPrice";
 
 const Product = (curElem) => {
-  const { id, image, name, price } = curElem
+  const { id, image, name, price } = curElem;
 
   return (
     <>
       <NavLink to={`/singleproduct/${id}`}>
-        <div className="flex flex-col sm:my-3 max-w-lg mx-auto text-center text-gray-900 bg-white border rounded-lg shadow dark:border-gray-600 dark:bg-gray-800 dark:text-white">
+        <div className="flex flex-col items-center justify-center sm:my-3 max-w-md mx-auto text-center text-gray-900 bg-white border rounded-lg shadow dark:border-gray-600 dark:bg-gray-800 dark:text-white">
           <Card imgAlt={name} imgSrc={image}>
             <h5 className="text-xl font-semibold capitalize tracking-tight text-gray-900 dark:text-white">
               {name}
             </h5>
-
-            <div className="flex items-center justify-between">
-              <span className="text-3xl font-bold text-gray-900 dark:text-white">
+            <div className="flex items-center justify-between mt-3">
+              <span className="text-2xl font-bold text-gray-900 dark:text-white">
                 {<FormatPrice price={price} />}
               </span>
             </div>
@@ -24,7 +23,7 @@ const Product = (curElem) => {
         </div>
       </NavLink>
     </>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;
