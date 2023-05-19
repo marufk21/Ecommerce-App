@@ -34,7 +34,6 @@ const AddToCart = ({ price, product }) => {
   return (
     <>
       <div className="inline">
-        {/* Item Colors */}
         <div className="my-3 flex ">
           Color:
           {product.colors.map((curColor, index) => {
@@ -56,7 +55,6 @@ const AddToCart = ({ price, product }) => {
             );
           })}
         </div>
-        {/* Price */}
         <span className=" title-font font-medium text-3xl text-gray-900">
           <FormatPrice price={price} />
         </span>

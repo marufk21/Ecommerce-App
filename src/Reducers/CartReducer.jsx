@@ -2,10 +2,9 @@ const CartReducer = (state, action) => {
   if (action.type === "ADD_TO_CART") {
     let { id, color, amount, product } = action.payload;
 
-    // tackle the existing product
-    let existingProduct = state.cart ? state.cart.find(
-      (curItem) => curItem.id === id + color
-    ) : null;
+    let existingProduct = state.cart
+      ? state.cart.find((curItem) => curItem.id === id + color)
+      : null;
 
     if (existingProduct) {
       let updatedProduct = state.cart.map((curElem) => {
@@ -44,7 +43,7 @@ const CartReducer = (state, action) => {
       };
     }
   }
-      
+
   // to set the increment and decrement
   if (action.type === "SET_DECREMENT") {
     let updatedProduct = state.cart.map((curElem) => {
@@ -118,13 +117,13 @@ const CartReducer = (state, action) => {
       total_item: updatedItemVal,
     };
   }
-  
+
   if (action.type === "CART_TOTAL_PRICE") {
     let total_price = 0;
     if (state.cart) {
       total_price = state.cart.reduce((initialVal, curElem) => {
         let { price, amount } = curElem;
-  
+
         initialVal = initialVal + price * amount;
         return initialVal;
       }, 0);

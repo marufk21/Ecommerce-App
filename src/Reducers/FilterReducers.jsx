@@ -24,7 +24,6 @@ const FilterReducer = (state, action) => {
 
     case "SORTING_PRODUCTS":
       let newSortData;
-      // let tempSortProduct = [...action.payload];
 
       const { filter_products, sorting_value } = state;
       let tempSortProduct = [...filter_products];

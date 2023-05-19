@@ -7,14 +7,6 @@ import { useCartContext } from "../Context/CartContext";
 const CartItem = ({ id, name, image, color, price, amount }) => {
   const { removeItem, setDecrease, setIncrement } = useCartContext();
 
-  // const setDecrease = () => {
-  //   // amount > 1 ? amount(amount - 1) : amount(1);
-  // };
-
-  // const setIncrease = () => {
-  //   // amount < stock ? amount(amount + 1) : amount(0);
-  // };
-
   return (
     <div className="flex items-center py-4 border-b border-gray-300">
       <div className="flex-shrink-0">

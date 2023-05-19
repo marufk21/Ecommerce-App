@@ -1,23 +1,19 @@
-import { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import PageNavigation from '../Components/PageNavigation'
-import { useProductContext } from '../Context/ProductState'
-import StarReview from '../Components/StarReview'
-import AddToCart from '../Components/AddToCart'
-import ProductImage from '../Components/ProductImage'
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import PageNavigation from "../Components/PageNavigation";
+import { useProductContext } from "../Context/ProductState";
+import StarReview from "../Components/StarReview";
+import AddToCart from "../Components/AddToCart";
+import ProductImage from "../Components/ProductImage";
 
-const API = 'https://api.pujakaitem.com/api/products'
+const API = "https://api.pujakaitem.com/api/products";
 
 const SingleProduct = () => {
-  const {
-    isSingleLoading,
-    singleProduct,
-    getSingleProduct,
-  } = useProductContext()
+  const { isSingleLoading, singleProduct, getSingleProduct } =
+    useProductContext();
 
-  const { id } = useParams()
+  const { id } = useParams();
   const {
-    // id: alias,
     name,
     image,
     company,
@@ -27,15 +23,15 @@ const SingleProduct = () => {
     stock,
     stars,
     reviews,
-  } = singleProduct
+  } = singleProduct;
 
   console.log(image);
   useEffect(() => {
-    getSingleProduct(`${API}?id=${id}`)
-  }, [])
+    getSingleProduct(`${API}?id=${id}`);
+  }, []);
 
   if (isSingleLoading) {
-    return <div>Loading.....</div>
+    return <div>Loading.....</div>;
   }
   return (
     <>
@@ -43,7 +39,7 @@ const SingleProduct = () => {
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
-           <ProductImage imgs={image}/>
+            <ProductImage imgs={image} />
 
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
@@ -53,9 +49,7 @@ const SingleProduct = () => {
                 {name}
               </h1>
 
-              {/* Star and Reviews */}
               <StarReview stars={stars} category={category} reviews={reviews} />
-              {/* Description */}
               <p className="leading-relaxed">{description}</p>
               <h2 className=" mt-4 text-sm title-font text-gray-500 tracking-widest">
                 Available: {stock}
@@ -67,7 +61,7 @@ const SingleProduct = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default SingleProduct
+export default SingleProduct;

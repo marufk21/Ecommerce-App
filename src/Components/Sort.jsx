@@ -2,13 +2,7 @@ import React from "react";
 import { useFilterContext } from "../Context/FilterContext";
 
 const Sort = () => {
-  const {
-    filter_products,
-    // grid_view,
-    // setGridView,
-    // setListView,
-    sorting,
-  } = useFilterContext();
+  const { filter_products, sorting } = useFilterContext();
   return (
     <>
       <div className="grid grid-cols-2 divide-x items-center mt-6">

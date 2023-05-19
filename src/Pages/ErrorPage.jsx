@@ -1,5 +1,5 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const ErrorPage = () => {
   return (
@@ -24,7 +24,7 @@ const ErrorPage = () => {
         </button>
       </main>
     </>
-  )
-}
+  );
+};
 
-export default ErrorPage
+export default ErrorPage;
