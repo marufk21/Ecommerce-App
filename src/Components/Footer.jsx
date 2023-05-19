@@ -1,85 +1,168 @@
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import React from "react";
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
-function Footer() {
+const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white">
-      <div className="container mx-auto py-8">
-        <div className="flex flex-wrap justify-between">
-          <div className="w-full sm:w-1/3 md:w-1/4 lg:w-1/5 mb-4">
-            <h3 className="text-xl font-bold mb-4">About Us</h3>
-            <p className="mb-2">
-            Rest assured that you're buying quality electronics from a trusted source.
-            </p>
-          </div>
-          <div className="w-full sm:w-1/3 md:w-1/4 lg:w-1/5 mb-4">
-            <h3 className="text-xl font-bold mb-4">Customer Service</h3>
-            <ul>
+    <footer className="bg-gray-900 py-8">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-wrap -mx-2">
+          <div className="w-full md:w-1/2 lg:w-1/4 px-2 mb-8">
+            <h3 className="text-xl font-bold text-white mb-4">Company</h3>
+            <ul className="text-gray-500">
               <li className="mb-2">
-                <a href="#" className="hover:underline">
+                <a
+                  href="#"
+                  className="hover:text-white transition duration-300"
+                >
+                  About Us
+                </a>
+              </li>
+              <li className="mb-2">
+                <a
+                  href="#"
+                  className="hover:text-white transition duration-300"
+                >
                   Contact Us
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#" className="hover:underline">
-                  Returns
+                <a
+                  href="#"
+                  className="hover:text-white transition duration-300"
+                >
+                  Careers
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#" className="hover:underline">
-                  FAQ
+                <a
+                  href="#"
+                  className="hover:text-white transition duration-300"
+                >
+                  Terms of Service
                 </a>
               </li>
             </ul>
           </div>
-          <div className="w-full sm:w-1/3 md:w-1/4 lg:w-1/5 mb-4">
-            <h3 className="text-xl font-bold mb-4">Follow Us</h3>
-            <div className="flex items-center">
-              <a href="#" className="mr-4">
-                <FaFacebook />
-              </a>
-              <a href="#" className="mr-4">
-                <FaTwitter />
-              </a>
-              <a href="#" className="mr-4">
-                <FaInstagram />
-              </a>
-            </div>
+          <div className="w-full md:w-1/2 lg:w-1/4 px-2 mb-8">
+            <h3 className="text-xl font-bold text-white mb-4">Categories</h3>
+            <ul className="text-gray-500">
+              <li className="mb-2">
+                <a
+                  href="#"
+                  className="hover:text-white transition duration-300"
+                >
+                  Mobiles
+                </a>
+              </li>
+              <li className="mb-2">
+                <a
+                  href="#"
+                  className="hover:text-white transition duration-300"
+                >
+                  Laptops
+                </a>
+              </li>
+              <li className="mb-2">
+                <a
+                  href="#"
+                  className="hover:text-white transition duration-300"
+                >
+                  Headphones
+                </a>
+              </li>
+              <li className="mb-2">
+                <a
+                  href="#"
+                  className="hover:text-white transition duration-300"
+                >
+                  Mobile Cases
+                </a>
+              </li>
+            </ul>
           </div>
-          <div className="w-full sm:w-1/3 md:w-1/4 lg:w-1/5 mb-4">
-            <h3 className="text-xl font-bold mb-4">Join Our Newsletter</h3>
-            <form className="flex flex-wrap">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full px-2 py-1 rounded-l-md bg-gray-700 text-white"
-              />
-              <button
-                type="submit"
-                className="my-2 bg-blue-500 hover:bg-blue-600 px-4 py-1 rounded-r-md text-white"
-              >
-                Subscribe
-              </button>
-            </form>
+          <div className="w-full md:w-1/2 lg:w-1/4 px-2 mb-8">
+            <h3 className="text-xl font-bold text-white mb-4">Support</h3>
+            <ul className="text-gray-500">
+              <li className="mb-2">
+                <a
+                  href="#"
+                  className="hover:text-white transition duration-300"
+                >
+                  FAQs
+                </a>
+              </li>
+              <li className="mb-2">
+                <a
+                  href="#"
+                  className="hover:text-white transition duration-300"
+                >
+                  Shipping &amp; Returns
+                </a>
+              </li>
+              <li className="mb-2">
+                <a
+                  href="#"
+                  className="hover:text-white transition duration-300"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li className="mb-2">
+                <a
+                  href="#"
+                  className="hover:text-white transition duration-300"
+                >
+                  Sitemap
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="w-full md:w-1/2 lg:w-1/4 px-2 mb-8">
+            <h3 className="text-xl font-bold text-white mb-4">
+              Connect With Us
+            </h3>
+            <ul className="flex items-center text-gray-500">
+              <li className="mr-4">
+                <a
+                  href="#"
+                  className="hover:text-white transition duration-300"
+                >
+                  <FaTwitter />
+                </a>
+              </li>
+              <li className="mr-4">
+                <a
+                  href="#"
+                  className="hover:text-white transition duration-300"
+                >
+                  <FaFacebook />
+                </a>
+              </li>
+              <li className="mr-4">
+                <a
+                  href="#"
+                  className="hover:text-white transition duration-300"
+                >
+                  <FaInstagram />
+                </a>
+              </li>
+              <li className="mr-4">
+                <a
+                  href="#"
+                  className="hover:text-white transition duration-300"
+                >
+                  <FaYoutube />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="border-t border-gray-600 mt-8 pt-4 flex justify-between">
-          <p>&copy; 2023 Ecommerce Store. All Rights Reserved.</p>
-          <ul>
-            <li className="inline-block ml-4">
-              <a href="#" className="hover:underline">
-                Privacy Policy
-              </a>
-            </li>
-            <li className="inline-block ml-4">
-              <a href="#" className="hover:underline">
-                Terms &amp; Conditions
-              </a>
-            </li>
-          </ul>
+        <div className="text-center text-gray-500 mt-8">
+          &copy; {new Date().getFullYear()} ElectriKart.com All rights reserved.
         </div>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
