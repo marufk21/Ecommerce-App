@@ -17,7 +17,7 @@ Link - https://electrikart.netlify.app
 4. Start the development server: `npm start`
 
 ## Features
-HomePage: Interactive carousels and products cards that engage users. 
+Homepage: Interactive UI with carousels and products cards that engage users. 
 
 Filtering options: Users can filter their search results by product category, color, and price range.
 
