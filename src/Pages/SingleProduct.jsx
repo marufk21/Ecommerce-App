@@ -25,7 +25,6 @@ const SingleProduct = () => {
     reviews,
   } = singleProduct;
 
-  console.log(image);
   useEffect(() => {
     getSingleProduct(`${API}?id=${id}`);
   }, []);
@@ -54,7 +53,6 @@ const SingleProduct = () => {
               <h2 className=" mt-4 text-sm title-font text-gray-500 tracking-widest">
                 Available: {stock}
               </h2>
-              {/* Add To Cart */}
               {stock > 0 && <AddToCart price={price} product={singleProduct} />}
             </div>
           </div>

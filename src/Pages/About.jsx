@@ -1,7 +1,7 @@
 function About() {
   return (
     <div className="container mx-auto px-4 lg:px-0 py-8">
-      <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+      <h2 className="text-3xl lg:text-4xl font-bold mb-6">
         Welcome to Our Store
       </h2>
       <p className="text-lg lg:text-xl mb-6">

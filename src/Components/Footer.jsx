@@ -5,116 +5,32 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 py-8">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap -mx-2">
+        <div className="flex  flex-wrap -mx-2">
           <div className="w-full md:w-1/2 lg:w-1/4 px-2 mb-8">
             <h3 className="text-xl font-bold text-white mb-4">Company</h3>
             <ul className="text-gray-500">
-              <li className="mb-2">
-                <a
-                  href="#"
-                  className="hover:text-white transition duration-300"
-                >
-                  About Us
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="#"
-                  className="hover:text-white transition duration-300"
-                >
-                  Contact Us
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="#"
-                  className="hover:text-white transition duration-300"
-                >
-                  Careers
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="#"
-                  className="hover:text-white transition duration-300"
-                >
-                  Terms of Service
-                </a>
-              </li>
+              <li className="mb-2">About Us</li>
+              <li className="mb-2">Contact Us</li>
+              <li className="mb-2">Careers</li>
+              <li className="mb-2">Terms of Service</li>
             </ul>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/4 px-2 mb-8">
             <h3 className="text-xl font-bold text-white mb-4">Categories</h3>
             <ul className="text-gray-500">
-              <li className="mb-2">
-                <a
-                  href="#"
-                  className="hover:text-white transition duration-300"
-                >
-                  Mobiles
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="#"
-                  className="hover:text-white transition duration-300"
-                >
-                  Laptops
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="#"
-                  className="hover:text-white transition duration-300"
-                >
-                  Headphones
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="#"
-                  className="hover:text-white transition duration-300"
-                >
-                  Mobile Cases
-                </a>
-              </li>
+              <li className="mb-2">Mobiles</li>
+              <li className="mb-2">Laptops</li>
+              <li className="mb-2">Headphones</li>
+              <li className="mb-2">Mobile Cases</li>
             </ul>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/4 px-2 mb-8">
             <h3 className="text-xl font-bold text-white mb-4">Support</h3>
             <ul className="text-gray-500">
-              <li className="mb-2">
-                <a
-                  href="#"
-                  className="hover:text-white transition duration-300"
-                >
-                  FAQs
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="#"
-                  className="hover:text-white transition duration-300"
-                >
-                  Shipping &amp; Returns
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="#"
-                  className="hover:text-white transition duration-300"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="#"
-                  className="hover:text-white transition duration-300"
-                >
-                  Sitemap
-                </a>
-              </li>
+              <li className="mb-2">FAQs</li>
+              <li className="mb-2">Shipping &amp; Returns</li>
+              <li className="mb-2">Privacy Policy</li>
+              <li className="mb-2">Sitemap</li>
             </ul>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/4 px-2 mb-8">
@@ -123,36 +39,16 @@ const Footer = () => {
             </h3>
             <ul className="flex items-center text-gray-500">
               <li className="mr-4">
-                <a
-                  href="#"
-                  className="hover:text-white transition duration-300"
-                >
-                  <FaTwitter />
-                </a>
+                <FaTwitter />
               </li>
               <li className="mr-4">
-                <a
-                  href="#"
-                  className="hover:text-white transition duration-300"
-                >
-                  <FaFacebook />
-                </a>
+                <FaFacebook />
               </li>
               <li className="mr-4">
-                <a
-                  href="#"
-                  className="hover:text-white transition duration-300"
-                >
-                  <FaInstagram />
-                </a>
+                <FaInstagram />
               </li>
               <li className="mr-4">
-                <a
-                  href="#"
-                  className="hover:text-white transition duration-300"
-                >
-                  <FaYoutube />
-                </a>
+                <FaYoutube />
               </li>
             </ul>
           </div>

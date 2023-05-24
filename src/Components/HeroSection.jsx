@@ -16,31 +16,31 @@ const HeroSection = () => {
             onClick={handleClick}
             className="w-full"
             src="https://source.unsplash.com/bRq7Cfn7zDs/1800x1600"
-            alt="Image NotFound"
+            alt=""
           />
           <img
             onClick={handleClick}
             className="w-full"
             src="https://source.unsplash.com/qDHwqQ05pVQ/1500x1000"
-            alt="Image NotFound"
+            alt=""
           />
           <img
             onClick={handleClick}
             className="w-full"
             src="https://source.unsplash.com/y0_vFxOHayg/1500x1000"
-            alt="Image NotFound"
+            alt=""
           />
           <img
             onClick={handleClick}
             className="w-full"
             src="https://source.unsplash.com/y1yQQmozTBw/1200x800"
-            alt="Image NotFound"
+            alt=""
           />
           <img
             onClick={handleClick}
             className="w-full"
             src="https://source.unsplash.com//nHsXs9FgIsk/1900x1200"
-            alt="Image NotFound"
+            alt=""
           />
         </Carousel>
       </div>

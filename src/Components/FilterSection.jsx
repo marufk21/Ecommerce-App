@@ -29,7 +29,7 @@ const FilterSection = () => {
   return (
     <>
       <aside className="w-full sm:w-64 sticky top-12" aria-label="Sidebar">
-        <div className="px-3 py-2 pb-5 rounded bg-gray-50 dark:bg-gray-800">
+        <div className="px-3 py-2 pb-5 rounded dark:bg-gray-800">
           <div className="flex flex-col items-center mb-4">
             <form onSubmit={(e) => e.preventDefault()}>
               <input
