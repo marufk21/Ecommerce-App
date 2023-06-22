@@ -1,6 +1,6 @@
 # ElectriKart
 
-Welcome to the Ecommerce Webapp. This webapp is built with an interactive user interface. The website has various pages and features to provide a seamless shopping experience.
+Welcome to the e-commerce web application with an interactive UI to provide a seamless shopping experience.
 
 Link - https://electrikart.netlify.app
 
@@ -17,11 +17,11 @@ Link - https://electrikart.netlify.app
 4. Start the development server: `npm start`
 
 ## Features
-Homepage: Interactive UI with carousels and products cards that engage users. 
+Homepage: Designed interactive UI with carousels and products cards that engage users. 
 
-Filtering options: Users can filter their search results by product category, color, and price range.
+ProductsPage: Designed Sidebar that allows users to filter search results by categories, colors, and price ranges for convenient browsing.
 
-Product pages: Each product page includes information such as the product's functionality, images, descriptions, reviews, and availability.
+SingleProductPage: Each product page includes information such as the product's functionality, images, descriptions, reviews, and availability.
 
 Cart page: The cart page displays the items in the user's cart, including their respective images, prices, and quantity. The subtotal and shipping fee are also displayed. Users can remove items or clear the entire cart if needed.
 
@@ -29,7 +29,8 @@ Contact page: Users can provide feedback or file a complaint on the contact page
 
 ## Upcoming Features
 
-- Design and implement a secure and efficient backend system for website, including user authentication, profile management, and checkout using Stripe.
+- Secure and efficient backend with user authentication.
+- Payment Gateway for checkout product in cart.
 
 ## Contributing
 
