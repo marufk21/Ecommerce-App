@@ -34,4 +34,4 @@ Contact page: Users can provide feedback or file a complaint on the contact page
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute, please [create a new issue](https://github.com/[username]/[projectname]/issues) or submit a pull request.
+Contributions are welcome If you'd like to contribute, please [create a new issue](https://github.com/[username]/[projectname]/issues) or submit a pull request.
