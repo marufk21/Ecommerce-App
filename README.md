@@ -1,8 +1,7 @@
+
 # ElectriKart
 
 Welcome to the e-commerce web application with an interactive UI to provide a seamless shopping experience.
-
-Link - https://electrikart.netlify.app
 
 ## Technologies Used
 
